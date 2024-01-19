@@ -1,5 +1,5 @@
-* {
-    box-sizing: border-box;
+:root {
+    --left-margin: 40px;
 }
 
 html, body {
@@ -14,6 +14,7 @@ label {
 
 .sidebar {
     flex: 1;
+    flex-shrink: 0;
     position: relative;
     display: flex;
     border-style: solid;
@@ -42,6 +43,52 @@ body {
 }
 
 .main-content {
-    flex: 2;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top {
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .label-input-set {
+            margin: var(--left-margin);
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            label {
+                align-self: flex-start;
+            }
+
+            input {
+                height: 1.5em;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    [type='submit'] {
+        align-self: flex-start;
+        margin-left: var(--left-margin);
+    }
+
+    div:last-child {
+        margin-left: var(--left-margin);
+    }
 }
 

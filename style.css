@@ -1,5 +1,7 @@
 :root {
     --left-margin: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
 
 html, body {
@@ -8,16 +10,11 @@ html, body {
     margin: 0;
 }
 
-label {
-    text-transform: uppercase;
-}
-
 .sidebar {
     flex: 1;
     flex-shrink: 0;
     position: relative;
     display: flex;
-    border-style: solid;
 }
 
 img {
@@ -46,6 +43,7 @@ body {
     flex: 1.5;
     display: flex;
     flex-direction: column;
+    background-color: ghostwhite;
 
     > * {
         flex: 1;
@@ -55,17 +53,21 @@ body {
     }
 
     .top {
-        padding-left: 5%;
         padding-right: 10%;
+        margin-left: var(--left-margin);
     }
 
     .form-inputs {
         display: flex;
         flex-direction: row;
+        gap: 40px;
         flex-wrap: wrap;
+        margin-bottom: 50px;
+        background-color: white;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        padding: 40px 0px 40px 40px;
 
         .label-input-set {
-            margin: var(--left-margin);
             width: 40%;
             display: flex;
             flex-direction: column;
@@ -73,21 +75,43 @@ body {
 
             label {
                 align-self: flex-start;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 0.8em;
+                color: gray;
+                letter-spacing: 2px;
             }
 
             input {
-                height: 1.5em;
-                font-size: 1.5em;
+                height: 1em;
+                font-size: 1em;
+                border-style: solid;
+                border-color: lightgray;
+                border-radius: 4px;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: lightskyblue;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
             }
         }
     }
 
     [type='submit'] {
         align-self: flex-start;
+        background-color: olivedrab;
+        color: white;
         margin-left: var(--left-margin);
+        padding: 10px 40px 10px 40px;
+        border-radius: 6px;
+        border-style: none;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        font-size: 30px;
     }
 
-    div:last-child {
+    >:last-child {
+        justify-content: start;
         margin-left: var(--left-margin);
     }
 }

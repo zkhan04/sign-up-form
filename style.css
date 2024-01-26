@@ -1,13 +1,31 @@
 :root {
     --left-margin: 40px;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+input {
+    height: 1em;
+    font-size: 1em;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 4px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:focus {
+    outline: none;
+    border-color: lightskyblue;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
@@ -82,19 +100,7 @@ body {
                 letter-spacing: 2px;
             }
 
-            input {
-                height: 1em;
-                font-size: 1em;
-                border-style: solid;
-                border-color: lightgray;
-                border-radius: 4px;
-            }
-
-            input:focus {
-                outline: none;
-                border-color: lightskyblue;
-                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-            }
+            
         }
     }
 
@@ -107,7 +113,7 @@ body {
         border-radius: 6px;
         border-style: none;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-        font-size: 30px;
+        font-size: 20px;
     }
 
     >:last-child {
